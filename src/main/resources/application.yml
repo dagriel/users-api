@@ -1,5 +1,5 @@
-server.port: 8000
-
+server:
+  port: 8000
 
 spring:
   application:
@@ -12,5 +12,13 @@ spring:
 #    mongodb.uri: mongodb://${DB_URL:localhost}/users
 
 #    Para utilização com MySQL, descomente as duas linhas abaixo, além das dependências no pom.xml.
-#  datasource:
-#    url: jdbc:mysql://root:root@${DB_URL:localhost}/users?useSsl=false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://root:root@${DB_URL:localhost}/users?useSsl=false
+
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update #create
+      dialect: org.hibernate.dialect.MySQL57Dialect

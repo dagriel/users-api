@@ -40,10 +40,11 @@
 *.iml
 *.ipr
 # Others cases
-# .idea/encodings.xml
 .idea/.gitignore
 .idea/misc.xml
 .idea/vcs.xml
+.idea/encodings.xml
+.idea/.name
 
 # CMake
 cmake-build-*/
